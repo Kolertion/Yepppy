@@ -16,8 +16,8 @@ jobs:
           passphrase: ${{ secrets.SERVER_PASSPHRASE }} 
           
           script: | 
-            rm Kolert
-            mkdir Kolert 
-            cd Kolert 
+            rm Yepppy
+            mkdir Yepppy 
+            cd Yepppy 
             git clone https://github.com/Kolertion/Yepppy.git
             echo 'Deployment successful to digitsal oceani' 
