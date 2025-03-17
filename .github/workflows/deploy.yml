@@ -7,7 +7,7 @@ jobs:
   deploy: 
     runs-on: ubuntu-latest 
     steps: 
-        name: Deploy NodeJS app 
+      - name: Deploy NodeJS app 
         uses: appleboy/ssh-action@v0.1.2 
         with: 
           host: ${{secrets.SSH_HOST}} # IP address of the server you wish to ssh into 
@@ -16,8 +16,8 @@ jobs:
           passphrase: ${{ secrets.SERVER_PASSPHRASE}} 
           
           script: | 
+            rm Yepppy
             mkdir Yepppy 
-            cd Yepppy
-            touch tssssss.php 
+            cd Yepppy 
             git clone https://github.com/Kolertion/Yepppy.git
             echo 'Deployment successful to digitsal oceani' 
